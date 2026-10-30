@@ -3,7 +3,7 @@ import React from 'react'
 import Calculate from './../assets/calculate.png'
 import bmi from "../assets/bmi.png"
 import bmr from "../assets/bmr.png"
-import car from "../assets/Car.png"
+import car from "../assets/car.png"
 
 import Cardmenu from '../components/cardmenu'
 import Footer from '../components/footer'

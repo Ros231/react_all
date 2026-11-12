@@ -4,7 +4,7 @@ export default function
 () {
   return (
     <>
-        <div className='mt-15'>
+        <div className='mt-15 bottom-0 w-full justify-center items-center flex flex-col p-5 bg-gray-200'>
             <p className='font-kanit text-gray-500'>
                 © 2026 CAL-SAU Allright Reserved. Created by P
             </p>

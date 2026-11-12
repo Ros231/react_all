@@ -1,7 +1,6 @@
 import React from 'react'
 
-export default function 
-() {
+export default function Footer() {
   return (
     <>
         <div className='mt-15 bottom-0 w-full justify-center items-center flex flex-col p-5 bg-gray-200'>

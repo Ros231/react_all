@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import bmiimg from "../assets/bmi.png"
 import { Link } from 'react-router'
 import Swal from 'sweetalert2'
-import Footer from '../components/footer'
 
 export default function bmi() {
   const [weight, setWeight] = useState('')
@@ -12,11 +11,11 @@ export default function bmi() {
   const handleCalculate = (e) => {
     e.preventDefault()
     if (!weight || !height) {
-      Swal.fire({
-          icon: "error",
-          title: "Oops...",
-          text: "กรุณากรอกข้อมูลให้ครบถ้วน",
-        });
+       Swal.fire({
+                      icon: "error",
+                      title: "Oops...",
+                      text: "กรุณากรอกข้อมูลให้ครบถ้วน",
+                    });
       return
     }
 
@@ -92,8 +91,6 @@ export default function bmi() {
           back to home page
         </Link>
       </div>
-
-      <Footer className="" />
     </>
   )
 }

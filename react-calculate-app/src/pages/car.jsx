@@ -139,7 +139,7 @@ export default function car() {
           </select>
 
           <div className='flex gap-3 mt-5'>
-            <button type='submit' className='w-full bg-blue-600 text-white p-2 rounded-sm font-kanit font-bold hover:bg-blue-800 cursor-pointer'>
+            <button type='submit' onClick={handleCalculate} className='w-full bg-blue-600 text-white p-2 rounded-sm font-kanit font-bold hover:bg-blue-800 cursor-pointer'>
               คำนวน
             </button>
             <button type='button' onClick={handleReset} className='w-full bg-gray-600 text-white p-2 rounded-sm font-kanit font-bold hover:bg-gray-800 cursor-pointer'>

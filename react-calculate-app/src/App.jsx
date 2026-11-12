@@ -14,6 +14,9 @@ export default function App() {
           <Route path='/car' element={<Car />} />
           <Route path='/bmi' element={<Bmi />} />
           <Route path='/bmr' element={<Bmr />} />
+          <Route path='/Car' element={<Car />} />
+          <Route path='/Bmi' element={<Bmi />} />
+          <Route path='/Bmr' element={<Bmr />} />
         </Routes>
       </BrowserRouter>
     </>

@@ -120,7 +120,7 @@ export default function bmr() {
           </div>
 
           <div className='flex gap-3 mt-5'>
-            <button type='submit' className='w-full bg-blue-600 text-white p-2 rounded-sm font-kanit font-bold hover:bg-blue-800 cursor-pointer'>
+            <button type='submit' onClick={handleCalculate} className='w-full bg-blue-600 text-white p-2 rounded-sm font-kanit font-bold hover:bg-blue-800 cursor-pointer'>
               คำนวน BMR
             </button>
             <button type='button' onClick={handleReset} className='w-full bg-red-600 text-white p-2 rounded-sm font-kanit font-bold hover:bg-red-800 cursor-pointer'>

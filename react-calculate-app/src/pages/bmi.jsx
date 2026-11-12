@@ -67,7 +67,7 @@ export default function bmi() {
             className='border border-gray-300 rounded-sm p-2' 
           />
 
-          <button type='submit' className='bg-blue-600 text-white p-2 mt-5 rounded-sm font-kanit font-bold hover:bg-blue-800 cursor-pointer'>
+          <button type='submit' onClick = {handleCalculate} className='bg-blue-600 text-white p-2 mt-5 rounded-sm font-kanit font-bold hover:bg-blue-800 cursor-pointer'>
             คำนวน
           </button>
           <button type='button' onClick={handleReset} className='bg-gray-600 text-white p-2 mt-5 rounded-sm font-kanit font-bold hover:bg-gray-800 cursor-pointer'>

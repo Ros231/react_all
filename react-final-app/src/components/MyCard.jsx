@@ -1,5 +1,5 @@
 import React from 'react'
-import profileImg from '../assets/'
+import profileImg from '../assets/profile.jpg'
 import { FaFacebookF, FaXTwitter, FaInstagram, FaLinkedinIn, FaGoogle } from 'react-icons/fa6'
 import { Link } from 'react-router-dom'
 

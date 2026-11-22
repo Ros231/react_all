@@ -292,7 +292,7 @@ body {
 
 /* ==================== 2. ABOUT ME PAGE ==================== */
 .about-content {
-  max-width: 620px;
+  max-width: fit-content;
 }
 
 .about-quote {

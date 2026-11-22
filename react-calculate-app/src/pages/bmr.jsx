@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import bmrimg from "../assets/bmr.png"
 import { Link } from 'react-router'
+import Footer from '../components/footer'
+import Swal from 'sweetalert2'
 
 export default function bmr() {
   const [weight, setWeight] = useState('')
@@ -12,7 +14,11 @@ export default function bmr() {
   const handleCalculate = (e) => {
     e.preventDefault()
     if (!weight || !height || !age) {
-      alert('กรุณากรอกข้อมูลน้ำหนัก ส่วนสูง และอายุให้ครบถ้วน')
+      Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "กรุณากรอกข้อมูลให้ครบถ้วน",
+              });
       return
     }
 
@@ -114,7 +120,7 @@ export default function bmr() {
           </div>
 
           <div className='flex gap-3 mt-5'>
-            <button type='submit' className='w-full bg-blue-600 text-white p-2 rounded-sm font-kanit font-bold hover:bg-blue-800 cursor-pointer'>
+            <button type='submit' onClick={handleCalculate} className='w-full bg-blue-600 text-white p-2 rounded-sm font-kanit font-bold hover:bg-blue-800 cursor-pointer'>
               คำนวน BMR
             </button>
             <button type='button' onClick={handleReset} className='w-full bg-red-600 text-white p-2 rounded-sm font-kanit font-bold hover:bg-red-800 cursor-pointer'>
@@ -134,6 +140,8 @@ export default function bmr() {
           back to home page
         </Link>
       </div>
+
+      <Footer className="" />
     </>
   )
 }

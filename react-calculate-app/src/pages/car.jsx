@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import carimg from "../assets/car.png"
 import { Link } from 'react-router'
+import Footer from '../components/footer'
+import Swal from 'sweetalert2'
 
 export default function car() {
   const [customerName, setCustomerName] = useState('')
@@ -13,7 +15,11 @@ export default function car() {
   const handleCalculate = (e) => {
     e.preventDefault()
     if (!carPrice || !interestRate) {
-      alert('กรุณากรอกราคารถและอัตราดอกเบี้ยให้ครบถ้วน')
+      Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "กรุณากรอกข้อมูลให้ครบถ้วน",
+              });
       return
     }
 
@@ -133,7 +139,7 @@ export default function car() {
           </select>
 
           <div className='flex gap-3 mt-5'>
-            <button type='submit' className='w-full bg-blue-600 text-white p-2 rounded-sm font-kanit font-bold hover:bg-blue-800 cursor-pointer'>
+            <button type='submit' onClick={handleCalculate} className='w-full bg-blue-600 text-white p-2 rounded-sm font-kanit font-bold hover:bg-blue-800 cursor-pointer'>
               คำนวน
             </button>
             <button type='button' onClick={handleReset} className='w-full bg-gray-600 text-white p-2 rounded-sm font-kanit font-bold hover:bg-gray-800 cursor-pointer'>
@@ -154,6 +160,8 @@ export default function car() {
           back to home page
         </Link>
       </div>
+
+      <Footer className="" />
     </>
   )
 }

@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import bmiimg from "../assets/bmi.png"
 import { Link } from 'react-router'
+import Swal from 'sweetalert2'
 
 export default function bmi() {
   const [weight, setWeight] = useState('')
@@ -10,7 +11,11 @@ export default function bmi() {
   const handleCalculate = (e) => {
     e.preventDefault()
     if (!weight || !height) {
-      alert('กรุณากรอกข้อมูลน้ำหนักและส่วนสูงให้ครบถ้วน')
+       Swal.fire({
+                      icon: "error",
+                      title: "Oops...",
+                      text: "กรุณากรอกข้อมูลให้ครบถ้วน",
+                    });
       return
     }
 
@@ -67,7 +72,7 @@ export default function bmi() {
             className='border border-gray-300 rounded-sm p-2' 
           />
 
-          <button type='submit' className='bg-blue-600 text-white p-2 mt-5 rounded-sm font-kanit font-bold hover:bg-blue-800 cursor-pointer'>
+          <button type='submit' onClick = {handleCalculate} className='bg-blue-600 text-white p-2 mt-5 rounded-sm font-kanit font-bold hover:bg-blue-800 cursor-pointer'>
             คำนวน
           </button>
           <button type='button' onClick={handleReset} className='bg-gray-600 text-white p-2 mt-5 rounded-sm font-kanit font-bold hover:bg-gray-800 cursor-pointer'>
